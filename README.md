@@ -1,6 +1,7 @@
 # VSITOO Smart Mug Custom Integration for Home Assistant
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=crisflashin&repository=ha-vsitoo-smart-mug&category=integration)
 
 This is a custom integration for Home Assistant that allows you to natively connect and control your VSITOO Smart Mug via Bluetooth (BLE) using Home Assistant's Bluetooth proxies.
 
