@@ -1,11 +1,11 @@
 {
   "domain": "vsitoo",
   "name": "VSITOO Smart Mug",
-  "codeowners": ["@Crist"],
+  "codeowners": ["@crisflashin"],
   "config_flow": true,
   "dependencies": ["bluetooth"],
-  "documentation": "https://github.com/",
+  "documentation": "https://github.com/crisflashin/ha-vsitoo-smart-mug",
   "iot_class": "local_push",
   "requirements": [],
-  "version": "1.0.0"
+  "version": "1.1.1"
 }

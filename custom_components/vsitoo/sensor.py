@@ -23,7 +23,13 @@ class VsitooBatterySensor(SensorEntity):
         self._attr_unique_id = f"{device.address}_battery"
 
     async def async_added_to_hass(self):
-        self.device.register_callback(self.async_write_ha_state)
+        self.async_on_remove(
+            self.device.register_callback(self.async_write_ha_state)
+        )
+
+    @property
+    def available(self):
+        return self.device.available
 
     @property
     def native_value(self):
@@ -40,7 +46,13 @@ class VsitooTemperatureSensor(SensorEntity):
         self._attr_unique_id = f"{device.address}_current_temp"
 
     async def async_added_to_hass(self):
-        self.device.register_callback(self.async_write_ha_state)
+        self.async_on_remove(
+            self.device.register_callback(self.async_write_ha_state)
+        )
+
+    @property
+    def available(self):
+        return self.device.available
 
     @property
     def native_value(self):
@@ -58,7 +70,13 @@ class VsitooBatteryVoltageSensor(SensorEntity):
         self._attr_unique_id = f"{device.address}_battery_voltage"
 
     async def async_added_to_hass(self):
-        self.device.register_callback(self.async_write_ha_state)
+        self.async_on_remove(
+            self.device.register_callback(self.async_write_ha_state)
+        )
+
+    @property
+    def available(self):
+        return self.device.available
 
     @property
     def native_value(self):
@@ -76,7 +94,13 @@ class VsitooTDVSensor(SensorEntity):
         self._attr_unique_id = f"{device.address}_tdv"
 
     async def async_added_to_hass(self):
-        self.device.register_callback(self.async_write_ha_state)
+        self.async_on_remove(
+            self.device.register_callback(self.async_write_ha_state)
+        )
+
+    @property
+    def available(self):
+        return self.device.available
 
     @property
     def native_value(self):

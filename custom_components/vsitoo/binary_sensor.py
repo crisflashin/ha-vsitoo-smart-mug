@@ -15,7 +15,13 @@ class VsitooChargingSensor(BinarySensorEntity):
         self._attr_unique_id = f"{device.address}_charging"
 
     async def async_added_to_hass(self):
-        self.device.register_callback(self.async_write_ha_state)
+        self.async_on_remove(
+            self.device.register_callback(self.async_write_ha_state)
+        )
+
+    @property
+    def available(self):
+        return self.device.available
 
     @property
     def is_on(self):
